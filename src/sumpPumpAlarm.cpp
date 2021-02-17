@@ -70,7 +70,7 @@ void sendAlarmActiveEmail() {
   client.publish(STATUS_TOPIC_ALARM, "ACTIVE");
   Serial.println("Alarm Active Sending email...");
   //Check if email sent already
- if (!emailsent) {
+ if (!emailSent) {
   smtpData.setDebug(true);
   //Set the Email host, port, account and password
   smtpData.setLogin(MAIL_HOST, MAIL_PORT, MAIL_USER, MAIL_PASSWORD);
